@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ana, ¿seamos amantes?</title>
+  <style>
+    body {
+      background-color: ;
+      color: yellow;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    form {
+      border: 2px solid black;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(9, 91, 94, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #mensaje {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function mostrarMensaje(opcion) {
+      var mensaje = document.getElementById('mensaje');
+
+      if (opcion === 'si') {
+        mensaje.innerHTML = '¡Bien hecho!';
+      } else if (opcion === 'no') {
+        mensaje.innerHTML = '¡Misión fallida!';
+      }
+
+      mensaje.style.display = 'block';
+    }
+  </script>
+</head>
+<body background="Ana2.jpg.jpeg">
+
+  <form>
+    <h2>Ana, ¿seamos amantes?</h2>
+    <label>
+      <input type="radio" name="respuesta" value="si" onclick="mostrarMensaje('si')"> Sí
+    </label>
+    <label>
+      <input type="radio" name="respuesta" value="no" onclick="mostrarMensaje('no')"> No
+    </label>
+    <br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <div id="mensaje"></div>
+
+</body>
+</html>
